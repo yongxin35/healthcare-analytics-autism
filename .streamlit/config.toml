@@ -1,1 +1,4 @@
-[theme]base="light"backgroundColor="#c9d7fd"secondaryBackgroundColor="#e9e2f1"
+[theme]
+base="light"
+backgroundColor="#c9d7fd"
+secondaryBackgroundColor="#e9e2f1"
