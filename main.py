@@ -1,6 +1,6 @@
 import numpy as np
 import streamlit as st
-import plotly.express as px
+import plotly.graph_objects as go
 import pickle
 import pandas as pd
 import base64
@@ -110,9 +110,13 @@ def pie_chart_predictions():
         labels = ['ASD', 'Non-ASD']
         prediction_score = [asd_probability_rounded1, non_asd_probability_rounded1]
 
-        fig = px.pie(names=labels, values=prediction_score, title='Pie Chart (ASD Predictions)')
+        fig = go.Figure(data=[go.Pie(labels=labels, values=prediction_score)])
+
+        # Update layout if needed
+        fig.update_layout(title='Pie Chart (ASD Predictions)')
 
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 # Container to show the prediction result
